@@ -2,7 +2,7 @@
 @wip
 Feature: Token Service Use Cases
   Demonstration of the understanding of the Hedera Hashgraph Token Service and transaction model
-
+  @dev
   Scenario: Create a mintable token
     Given A Hedera account with more than 10 hbar
     When I create a token named Test Token (HTT)
@@ -12,6 +12,7 @@ Feature: Token Service Use Cases
     And The token is owned by the account
     And An attempt to mint 100 additional tokens succeeds
 
+  @dev
   Scenario: Create a fixed supply token
     Given A Hedera account with more than 10 hbar
     When I create a fixed supply token named Test Token (HTT) with 1000 tokens
@@ -22,6 +23,7 @@ Feature: Token Service Use Cases
     And The token is owned by the account
     And An attempt to mint tokens fails
 
+  @dev
   Scenario: Transfer tokens between 2 accounts
     Given A first hedera account with more than 10 hbar
     And A second Hedera account
@@ -33,6 +35,7 @@ Feature: Token Service Use Cases
     Then The second account holds 10 HTT tokens
     And The first account holds 90 HTT tokens
 
+  @dev
   Scenario: Create a token transfer transaction paid for by the recipient
     Given A first hedera account with more than 10 hbar
     And A second Hedera account
@@ -45,6 +48,7 @@ Feature: Token Service Use Cases
     And The first account holds 10 HTT tokens
     And The first account has paid for the transaction fee
 
+  @dev
   Scenario: Create a multi party token transfer transaction
     Given A token named Test Token (HTT) with 1000 tokens
     And A first hedera account with more than 10 hbar and 100 HTT tokens
@@ -56,5 +60,5 @@ Feature: Token Service Use Cases
     Then The first account holds 90 HTT tokens
     And The second account holds 90 HTT tokens
     And The third account holds 105 HTT tokens
-    And The fourth account holds 115 HTT tokens
+    And The fourth account holds 115 HTT tokens 
 
